@@ -1,13 +1,106 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+ font-family: sans-serif;
+}
+:root{
+  --section-color:#eff7fa;
+  --dark-color: #19283f ;
+}
+/* start-nav */
+nav {
+  background-color: white;
+}
+nav svg {
+    font-size: 24px;
+    margin-right: 10px;
+}
+nav .links {
+  font-size: 1.2rem;
+}
+.custom-toggler,
+.custom-toggler:focus {
+    outline: none; 
+    box-shadow: none; 
+    border-color: transparent;
+  }
+/* end-nav */
+/* start-landing */
+.carousel-item img {
+  max-height: 400px;
+  object-fit: contain; 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.carousel-item h1 {
+  font-size: 2.5rem; 
 }
+.carousel-item .lead {
+  font-size: 16px;
+}
+@media (max-width: 576px) {
+  .carousel-item h1 {
+    font-size: 1.5rem;
+  }
+  .carousel-item .lead {
+    font-size: 13px;
+  }
+  .carousel-item img {
+    max-height: 300px;
+  }
+}
+/* end-landing */
+/* start-service */
+.srvice svg {
+  background-color: #f3f5f9;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+.srvice h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.srvice p {
+  font-size: 15px;
+}
+/* end-service */
+/* start-discount */
+.discount {
+  background-color: var(--section-color);
+}
+/* end-discount */
+/* start-discount */
+.discount .container .card {
+  background-color: #ffffff;
+  height: 550px;
+  margin-inline: 10px;
+}
+.discount .container .card .image {
+  width: 100%;
+  height: 60%;
+}
+.discount .container .card .image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.discount .container .card .plus {
+  padding: 10px;
+  width: 42px;
+  color: var(--dark-color);
+  border-radius: 50%;
+  border: 1px solid #ddd;
+}
+.discount .container .card .plus:hover{
+  transition-duration: .5s;
+  background-color: var(--dark-color);
+  color: white;
+  cursor: pointer;
+}
+.discount .container .card .star svg {
+  color:#ffcd4e;
+}
+/* end-discount */
+/* start-product-details */
+.product-details .p-card {
+  height: 400px;
+}
+/* end-product-details */
