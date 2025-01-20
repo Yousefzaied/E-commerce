@@ -1,18 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Product2 from "./Product2";
+import data from "./db";
 
 const NewProduct = () => {
-    const api_url = 'http://localhost:3001/products';
-    const [product, setProduct] = useState([]);
-
-    const getProducts = () => {
-        fetch(api_url)
-        .then((res) => res.json())
-        .then((data) => setProduct(data))
-    }
+    const [product, setProducts] = useState([]);
 
     useEffect(() => {
-        getProducts();
+        setProducts(data.products);
     }, []);
     return ( 
         <>
